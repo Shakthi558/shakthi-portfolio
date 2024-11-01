@@ -304,17 +304,17 @@ ul#nav li.current a { color: #fe6928; }
 /* Adjust grid columns for smaller screens */
 @media (max-width: 1024px) {
    .bars .skills {
-      grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+      grid-template-columns: repeat(2, 1fr); /* 3 columns for tablets */
    }
 }
 
 @media (max-width: 768px) {
-   .bars .skills {
-      grid-template-columns: repeat(2, 1fr); /* 2 columns for small tablets */
+   .bars .skills  {
+      grid-template-columns: 1fr; /* 2 columns for small tablets */
    }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 480px) {
    .bars .skills {
       grid-template-columns: 1fr; /* 1 column for mobile phones */
    }
@@ -332,7 +332,7 @@ ul#nav li.current a { color: #fe6928; }
   	margin-top: 36px;
    list-style:none;
    display: grid;
-   grid-template-columns: repeat(4, 1fr); /* 2 columns */
+   grid-template-columns: repeat(3, 1fr); 
    gap: 20px; /* Space between items */
   
 }

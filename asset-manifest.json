@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/shakthi-portfolio/static/css/main.31d6cfe0.css",
+    "main.js": "/shakthi-portfolio/static/js/main.6abdc9de.js",
+    "static/js/453.c0bb404c.chunk.js": "/shakthi-portfolio/static/js/453.c0bb404c.chunk.js",
+    "index.html": "/shakthi-portfolio/index.html",
+    "main.6abdc9de.js.map": "/shakthi-portfolio/static/js/main.6abdc9de.js.map",
+    "453.c0bb404c.chunk.js.map": "/shakthi-portfolio/static/js/453.c0bb404c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.6abdc9de.js"
+  ]
+}

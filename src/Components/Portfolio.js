@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Zmage from "react-zmage";
 import Fade from "react-reveal";
+import Slide from "react-reveal";
 
 let id = 0;
 class Portfolio extends Component {
@@ -22,11 +23,22 @@ class Portfolio extends Component {
 
     return (
       <section id="portfolio">
+        <Slide left duration={1300}>
+          <div className="row work">
+          <div className="three columns header-col">
+              <h1>
+                <span>Portfolio</span>
+              </h1>
+            </div>
+
+            <div className="nine columns main-col">
+              <p>Check Out Some of My Works.</p> </div>
+          </div>
+        </Slide>
+
         <Fade left duration={1000} distance="40px">
           <div className="row">
             <div className="twelve columns collapsed">
-              <h1>Check Out Some of My Works.</h1>
-
               <div
                 id="portfolio-wrapper"
                 className="bgrid-quarters s-bgrid-thirds cf"

@@ -14,7 +14,6 @@ class Resume extends Component {
   render() {
     if (!this.props.data) return null;
 
-    const skillmessage = this.props.data.skillmessage;
     const education = this.props.data.education.map(function (education) {
       return (
         <div key={education.school}>
@@ -36,7 +35,7 @@ class Resume extends Component {
             {work.title}
             <span>&bull;</span> <em className="date">{work.years}</em>
           </p>
-          <p>{work.description}</p>
+          <p>{work.description.map(item => <li>{item}</li>)}</p>
         </div>
       );
     });
@@ -57,6 +56,19 @@ class Resume extends Component {
     return (
       <section id="resume">
         <Slide left duration={1300}>
+          <div className="row work">
+            <div className="three columns header-col">
+              <h1>
+                <span>Work</span>
+              </h1>
+            </div>
+
+            <div className="nine columns main-col">{work}</div>
+          </div>
+        </Slide>
+
+
+        <Slide left duration={1300}>
           <div className="row education">
             <div className="three columns header-col">
               <h1>
@@ -72,17 +84,7 @@ class Resume extends Component {
           </div>
         </Slide>
 
-        <Slide left duration={1300}>
-          <div className="row work">
-            <div className="three columns header-col">
-              <h1>
-                <span>Work</span>
-              </h1>
-            </div>
-
-            <div className="nine columns main-col">{work}</div>
-          </div>
-        </Slide>
+        
 
         <Slide left duration={1300}>
           <div className="row skill">
@@ -92,10 +94,10 @@ class Resume extends Component {
               </h1>
             </div>
 
-            <div className="nine columns main-col">
-              <p>{skillmessage}</p>
+            <div className="twelve columns main-collapsed">
+              
 
-              <div className="bars">
+              <div  className="bars">
                 <ul className="skills">{skills}</ul>
               </div>
             </div>

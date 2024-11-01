@@ -301,6 +301,24 @@ ul#nav li.current a { color: #fe6928; }
 /*----------------------------------------------*/
 /*	Skill Bars
 /*----------------------------------------------*/
+/* Adjust grid columns for smaller screens */
+@media (max-width: 1024px) {
+   .bars .skills {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns for tablets */
+   }
+}
+
+@media (max-width: 768px) {
+   .bars .skills {
+      grid-template-columns: repeat(2, 1fr); /* 2 columns for small tablets */
+   }
+}
+
+@media (max-width: 480px) {
+   .bars .skills {
+      grid-template-columns: 1fr; /* 1 column for mobile phones */
+   }
+}
 
 .bars {
 	width: 100%;
@@ -321,9 +339,9 @@ ul#nav li.current a { color: #fe6928; }
 .bars li {
    position: relative;
   	margin-bottom: 40px;
-  	background: #333;
+  	background: #cfcdcd;
   	height: 42px;
-  	border-radius: 0px;
+  	border-radius: 7px;
 }
 .bars li em {
 	font: 15px 'opensans-bold', sans-serif;
@@ -333,6 +351,7 @@ ul#nav li.current a { color: #fe6928; }
 	font-weight: normal;
    position: relative;
 	top: -36px;
+   
 }
 .bar-expand {
    position: absolute;
@@ -345,7 +364,8 @@ ul#nav li.current a { color: #fe6928; }
    display: inline-block;
   	height: 42px;
    line-height: 42px;
-   border-radius: 0px;
+   border-radius: 7px;
+   
 }
 /*
 .git {
